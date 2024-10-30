@@ -13,14 +13,14 @@ public class Aluno {
     @Id
     @PartitionKey
     @GeneratedValue
-    private UUID matricula;
+    private String matricula;
     private String nome;
 
     
-    public UUID getMatricula() {
+    public String getMatricula() {
         return matricula;
     }
-    public void setMatricula(UUID matricula) {
+    public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
     public String getNome() {
@@ -29,6 +29,7 @@ public class Aluno {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
 /*
     //private cursoGraduacao
     private DiplomaEscola diploma;
