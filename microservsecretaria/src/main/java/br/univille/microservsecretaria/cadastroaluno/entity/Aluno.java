@@ -15,6 +15,7 @@ public class Aluno {
     @GeneratedValue
     private UUID matricula;
     private String nome;
+
     
     public UUID getMatricula() {
         return matricula;
@@ -28,4 +29,16 @@ public class Aluno {
     public void setNome(String nome) {
         this.nome = nome;
     }
+/*
+    //private cursoGraduacao
+    private DiplomaEscola diploma;
+    private StatusAluno status;
+
+    public Aluno(String nome, DiplomaEscola diploma, StatusAluno status) {
+        this.nome = nome;
+        this.diploma = diploma;
+        this.status = status;
+    }
+*/
+
 }
