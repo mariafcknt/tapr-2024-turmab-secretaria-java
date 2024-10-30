@@ -4,14 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import br.univille.microservsecretaria.documentacao.entity.CertificadoConclusao;
+import br.univille.microservsecretaria.documentacao.repository.CertificadoConclusaoRepository;
 import br.univille.microservsecretaria.documentacao.service.CertificadoConclusaoService;
 
 public class CertificadoConclusaoServiceImpl 
-    implements CertificadoConclusaoService{
+    implements CertificadoConclusaoService {
 
 
     @Autowired
-    private CertificadoConclusãoRepository repository;
+    private CertificadoConclusaoRepository repository;
 
     @Override
     public List<CertificadoConclusao> getAll() {
@@ -22,14 +23,10 @@ public class CertificadoConclusaoServiceImpl
         return listaCertificados;
     }
 
-    public CertificadoConlusão save (CertificadoConclusão certificadoconlusão) {
-        return repository.save(certificadoconlusão);
+    public CertificadoConclusao save (CertificadoConclusao certificadoconclusao) {
+        return repository.save(certificadoconclusao);
     }
 
-    @Override
-    public CertificadoConclusao save(CertificadoConclusao certificadoConclusao) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'save'");
-    }
+    
 
 }

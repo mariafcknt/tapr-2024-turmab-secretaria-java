@@ -1,5 +1,7 @@
 package br.univille.microservsecretaria.documentacao.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import br.univille.microservsecretaria.documentacao.entity.CertificadoConclusao;
+import br.univille.microservsecretaria.documentacao.service.CertificadoConclusaoService;
 
 public class APIController {
     
@@ -17,7 +20,7 @@ public class APIController {
     @GetMapping
     public ResponseEntity<List<CertificadoConclusao>>get(){
         var listaCertificados = service.getAll();
-        return new ResponseEntity<List<CertificadoConclusao>>(listaCertificados, HttpsStatus.OK)
+        return new ResponseEntity<List<CertificadoConclusao>>(listaCertificados, HttpStatus.OK);
     }
 
     @PostMapping
@@ -25,10 +28,10 @@ public class APIController {
         if(certificadoconlusão == null){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        var certificadoSalvo = service.sabe(certificadoconlusão);
+        var certificadoSalvo = service.save(certificadoconlusão);
 
         return new ResponseEntity<CertificadoConclusao>(certificadoSalvo, HttpStatus.OK);
     }
-    }
-
 }
+
+
