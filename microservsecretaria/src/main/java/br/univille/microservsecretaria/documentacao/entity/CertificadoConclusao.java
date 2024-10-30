@@ -6,7 +6,7 @@ import com.azure.spring.data.cosmos.core.mapping.GeneratedValue;
 import com.azure.spring.data.cosmos.core.mapping.PartitionKey;
 import br.univille.microservsecretaria.cadastroaluno.entity.Aluno;
 
-@Container(containerName = "certificadoConclusao", autoCreateContainer = true)
+@Container(containerName = "certificadoconclusao", autoCreateContainer = true)
 public class CertificadoConclusao {
 
    @Id

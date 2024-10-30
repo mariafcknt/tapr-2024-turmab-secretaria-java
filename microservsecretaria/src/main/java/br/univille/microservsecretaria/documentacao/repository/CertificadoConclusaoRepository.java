@@ -8,7 +8,7 @@ import br.univille.microservsecretaria.documentacao.entity.CertificadoConclusao;
 public interface CertificadoConclusaoRepository
     extends CrudRepository<CertificadoConclusao, String>{
     
-    }
+    };
 
 
 

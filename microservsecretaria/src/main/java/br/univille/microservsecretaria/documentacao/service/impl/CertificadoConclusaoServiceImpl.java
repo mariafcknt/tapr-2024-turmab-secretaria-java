@@ -3,10 +3,13 @@ package br.univille.microservsecretaria.documentacao.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import br.univille.microservsecretaria.documentacao.entity.CertificadoConclusao;
 import br.univille.microservsecretaria.documentacao.repository.CertificadoConclusaoRepository;
 import br.univille.microservsecretaria.documentacao.service.CertificadoConclusaoService;
 
+@Service
 public class CertificadoConclusaoServiceImpl 
     implements CertificadoConclusaoService {
 
