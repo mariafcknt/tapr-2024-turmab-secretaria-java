@@ -1,9 +1,7 @@
 package br.univille.microservsecretaria.documentacao.entity;
 
 import java.util.UUID;
-
 import org.springframework.data.annotation.Id;
-
 import com.azure.spring.data.cosmos.core.mapping.Container;
 import com.azure.spring.data.cosmos.core.mapping.GeneratedValue;
 import com.azure.spring.data.cosmos.core.mapping.PartitionKey;
@@ -11,7 +9,7 @@ import com.azure.spring.data.cosmos.core.mapping.PartitionKey;
 import br.univille.microservsecretaria.cadastroaluno.entity.Aluno;
 
 @Container(containerName = "certificadoConclusao", autoCreateContainer = true)
-public class certificadoConclusao {
+public class CertificadoConclusao {
 
    @Id
    @PartitionKey
