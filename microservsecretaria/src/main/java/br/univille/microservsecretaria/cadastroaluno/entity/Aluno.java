@@ -1,7 +1,5 @@
 package br.univille.microservsecretaria.cadastroaluno.entity;
 
-import java.util.UUID;
-
 import org.springframework.data.annotation.Id;
 
 import com.azure.spring.data.cosmos.core.mapping.Container;
