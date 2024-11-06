@@ -1,11 +1,11 @@
-package br.univille.microservsecretaria.service.impl;
+package br.edu.univille.microservcolegio.univille.microservsecretaria.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.univille.microservsecretaria.service.AlunoService;
-import br.univille.microservsecretaria.entity.Aluno;
-import br.univille.microservsecretaria.repository.AlunoRepository;
+import br.edu.univille.microservcolegio.univille.microservsecretaria.cadastroaluno.entity.Aluno;
+import br.edu.univille.microservcolegio.univille.microservsecretaria.repository.AlunoRepository;
+import br.edu.univille.microservcolegio.univille.microservsecretaria.service.AlunoService;
 
 import java.util.List;
 import java.util.ArrayList;
