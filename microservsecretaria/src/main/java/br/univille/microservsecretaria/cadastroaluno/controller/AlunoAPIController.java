@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.microservsecretaria.cadastroaluno.entity.Aluno;
 import br.univille.microservsecretaria.cadastroaluno.service.AlunoService;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
 
 @RestController
 @RequestMapping("/api/v1/alunos")
@@ -35,5 +38,17 @@ public class AlunoAPIController {
         var alunoSalvo = service.save(aluno);
         
         return new ResponseEntity<Aluno>(alunoSalvo,HttpStatus.OK);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Aluno> put(@PathVariable("id") String id, @RequestBody Aluno aluno){
+        if(aluno == null || id == "" || id == null){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+        aluno = service.update(id, aluno);
+        if (aluno == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<Aluno>(aluno,HttpStatus.OK);
     }
 }

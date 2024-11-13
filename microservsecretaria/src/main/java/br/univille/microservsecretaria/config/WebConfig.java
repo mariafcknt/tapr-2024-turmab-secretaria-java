@@ -1,4 +1,4 @@
-package br.edu.univille.microservcolegio.config;
+package br.univille.microservsecretaria.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
