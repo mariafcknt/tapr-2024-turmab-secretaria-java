@@ -8,4 +8,7 @@ public interface CertificadoConclusaoService {
     
     List<CertificadoConclusao>getAll();
     CertificadoConclusao save (CertificadoConclusao certificadoconclusao);
+    CertificadoConclusao update (String id, CertificadoConclusao certificadoconclusao);
+    CertificadoConclusao delete (String id);
+    
 }

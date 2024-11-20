@@ -30,6 +30,31 @@ public class CertificadoConclusaoServiceImpl
         return repository.save(certificadoconclusao);
     }
 
+    @Override
+    public CertificadoConclusao update(String id, CertificadoConclusao certificadoconclusao) {
+        var buscaCertificadoAntigo = repository.findAllById(id);
+        if(buscaCertificadoAntigo.isPresent()){
+            var certificadoAntigo = buscaCertificadoAntigo.get();
+            certificadoAntigo.setNome(certificadoconclusao.getMatricula());
+
+            repository.save(certificadoAntigo);
+            return certificadoAntigo;
+        }
+        return null;
+        
+    }
+
+    @Override
+    public CertificadoConclusao delete(String id) {
+        var buscaCertificadoAntigo = repository.findAllById(id);
+        if(buscaCertificadoAntigo.isPresent()){ 
+            var certificadoAntigo = buscaCertificadoAntigo.get();
+            repository.delete(certificadoAntigo);
+            return certificadoAntigo;
+    }
+        return null;
+    
+
     
 
 }
